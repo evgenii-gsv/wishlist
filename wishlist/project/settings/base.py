@@ -14,6 +14,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Third party
+    'storages',
+
     # Apps
     'wishlist.users.apps.UsersConfig',
 ]
