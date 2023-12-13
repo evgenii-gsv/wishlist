@@ -25,7 +25,6 @@ jobs:
 
       - name: Install Dependencies
         run: make install && make install-pre-commit
-        working-directory: ./Wishlist
 
       - name: Lint
         run: make lint
