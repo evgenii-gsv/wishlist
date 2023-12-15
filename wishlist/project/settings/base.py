@@ -16,6 +16,9 @@ INSTALLED_APPS = [
 
     # Third party
     'storages',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 
     # Apps
     'wishlist.users.apps.UsersConfig',
@@ -29,6 +32,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'wishlist.project.urls'
@@ -78,6 +82,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTH_USER_MODEL = 'users.User'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
