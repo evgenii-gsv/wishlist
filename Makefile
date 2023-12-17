@@ -29,7 +29,7 @@ runserver:
 
 .PHONY: shell
 shell:
-	poetry run python -m wishlist.manage shell
+	poetry run python -m wishlist.manage shell_plus
 
 .PHONY: superuser
 superuser:
