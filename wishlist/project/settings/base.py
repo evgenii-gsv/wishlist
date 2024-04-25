@@ -41,7 +41,9 @@ ROOT_URLCONF = 'wishlist.project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'wishlist' / 'templates',  # type: ignore # noqa: F821
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -96,8 +98,14 @@ MEDIA_ROOT = BASE_DIR / 'media'  # type: ignore # noqa: F821
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # type: ignore # noqa: F821
+STATICFILES_DIRS = [
+    BASE_DIR / 'wishlist' / 'static',  # type: ignore # noqa: F821
+]
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
