@@ -23,6 +23,11 @@ run-dependencies:
 	test -f .env || touch .env
 	docker compose -f docker-compose.dev.yml up --force-recreate db
 
+.PHONY: stop-dependencies
+stop-dependencies:
+	test -f .env || touch .env
+	docker compose -f docker-compose.dev.yml down
+
 .PHONY: runserver
 runserver:
 	poetry run python -m wishlist.manage runserver
