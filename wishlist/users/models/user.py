@@ -14,7 +14,8 @@ class User(AbstractUser):
     last_name = None
     email = models.EmailField(_('email address'), unique=True)
     identifier = RandomCharField(length=8, editable=False, unique=True, db_index=True)  # type: ignore
-    name = models.CharField(_('name'), max_length=255, blank=True)
+    name = models.CharField(_('name'), max_length=255, null=True, blank=True)
+    date_of_birth = models.DateField(_('date of birth'), null=True, blank=True)
 
     objects = UserManager()
 
