@@ -3,17 +3,17 @@ from typing import List
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from django_extensions.db.fields import RandomCharField
+
+from wishlist.general.models import RandomIdentifierModel
 
 from ..managers import UserManager
 
 
-class User(AbstractUser):
+class User(AbstractUser, RandomIdentifierModel):
     username = None
     first_name = None
     last_name = None
     email = models.EmailField(_('email address'), unique=True)
-    identifier = RandomCharField(length=8, editable=False, unique=True, db_index=True)  # type: ignore
     name = models.CharField(_('name'), max_length=255, null=True, blank=True)
     date_of_birth = models.DateField(_('date of birth'), null=True, blank=True)
 
