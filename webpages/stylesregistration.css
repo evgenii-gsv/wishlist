@@ -1,0 +1,337 @@
+* {
+    background-color:  #F5F5F5;
+}
+
+body {
+    margin: 0px;
+}
+
+#header_container {
+    max-height: 100px;
+    background-color: #3D4FC5;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.logo_header {
+    background-color: #3D4FC5;
+}
+
+.logo_header img {
+    margin-left: 120px;
+    margin-top: 10px;
+    background-color: #3D4FC5;
+}
+
+.text_header {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Равномерно распределить оставшееся пространство */
+    margin-right: 120px;
+    margin-left: 619px;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: "Rubik";
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+
+}
+
+.text_header button {
+    background-color: #219E60;
+    width: 170px;
+    height: 40px;
+    border-radius: 30px;
+    border-width: 0px;
+    margin-right: 10%;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.text_header button:hover {
+    background-color: #167D4A;
+}
+
+.text_header button a {
+    width: 170px;
+    height: 19px;
+    top: 11px;
+    bottom: 10px;
+    cursor: default;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-family: "Rubik";
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #219E60;
+}
+
+.text_header button a:hover {
+    background-color: #167D4A;
+}
+
+.main_page_registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 650px;
+}
+
+.main_page_registration .h2_registr {
+    width: 483px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    color: rgb(61, 79, 197);
+    font-family: "Rubik";
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.h2_registr p {
+    margin: 0px;
+}
+
+.main_page_registration .h3_registr {
+    width: 242px;
+    height: 24px;
+    margin-top: 24px;
+    color: rgb(1, 0, 0);
+    font-family: Rubik;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.h3_registr p {
+    margin: 0px;
+}
+
+.main_page_registration .h4_registr {
+    width: 193px;
+    height: 19px;
+    margin-top: 16px;
+    color: rgb(1, 0, 0);
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.h4_registr p {
+    margin: 0px;
+}
+
+.main_page_registration a {
+
+    color: #3D4FC5;
+}
+
+.main_page_registration .form_registr input {
+    margin-top: 24px;
+    border-radius: 30px;
+    background: rgb(61, 79, 197);
+    width: 324px;
+    height: 52px;
+    border-width: 0px;
+}
+
+/*input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    background-color: #ffffff;
+    outline: none;
+    border: 1px solid rgb(61, 79, 197);
+}*/
+
+#myInput.active, #myInput:focus {
+    background-color: #fff; /* цвет фона при фокусе на поле ввода */
+    outline: none;
+    border: 1px solid rgb(61, 79, 197);
+}
+
+#myInput:not(.active):focus {
+    background-color: initial; /* используйте изначальный цвет фона, если поле не активно */
+    outline: none;
+    border: 1px solid rgb(61, 79, 197);
+}
+
+#myInput.error {
+    border: 1px solid red; /* красная рамка в случае ошибки */
+}
+
+#myInput.success {
+    border: 1px solid green; /* зелёная рамка при успешном вводе */
+}
+
+#myInput {
+    font-size: 18px; /* Установка размера шрифта */
+}
+
+#myInput2.active, #myInput2:focus {
+    background-color: #fff; /* цвет фона при фокусе на поле ввода */
+    outline: none;
+    border: 1px solid rgb(61, 79, 197);
+}
+
+#myInput2:not(.active):focus {
+    background-color: initial; /* используйте изначальный цвет фона, если поле не активно */
+    outline: none;
+    border: 1px solid rgb(61, 79, 197);
+}
+
+#myInput2.error {
+    border: 1px solid red; /* красная рамка в случае ошибки */
+}
+
+#myInput2.success {
+    border: 1px solid green; /* зелёная рамка при успешном вводе */
+}
+
+#myInput2 {
+    font-size: 18px; /* Установка размера шрифта */
+}
+
+#myInput3.active, #myInput3:focus {
+    background-color: #fff; /* цвет фона при фокусе на поле ввода */
+    outline: none;
+    border: 1px solid rgb(61, 79, 197);
+}
+
+#myInput3:not(.active):focus {
+    background-color: initial; /* используйте изначальный цвет фона, если поле не активно */
+    outline: none;
+    border: 1px solid rgb(61, 79, 197);
+}
+
+#myInput3.error {
+    border: 1px solid red; /* красная рамка в случае ошибки */
+}
+
+#myInput3.success {
+    border: 1px solid green; /* зелёная рамка при успешном вводе */
+}
+
+#myInput3 {
+    font-size: 18px; /* Установка размера шрифта */
+}
+
+#myInput4.active, #myInput4:focus {
+    background-color: #fff; /* цвет фона при фокусе на поле ввода */
+    outline: none;
+    border: 1px solid rgb(61, 79, 197);
+}
+
+#myInput4:not(.active):focus {
+    background-color: initial; /* используйте изначальный цвет фона, если поле не активно */
+    outline: none;
+    border: 1px solid rgb(61, 79, 197);
+}
+
+#myInput4.error {
+    border: 1px solid red; /* красная рамка в случае ошибки */
+}
+
+#myInput4.success {
+    border: 1px solid green; /* зелёная рамка при успешном вводе */
+}
+
+#myInput4 {
+    font-size: 18px; /* Установка размера шрифта */
+}
+
+input {
+    padding-left: 24px;
+}
+
+input::placeholder {
+    text-indent: 0px;
+    left: 24px;
+    right: 251px;
+    top: 16px;
+    bottom: 15px;
+    color: rgb(176, 190, 197);
+    font-family: Rubik;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.form_registr #errorMessageName, #errorMessageMail, #errorMessagePass1, #errorMessagePass2, #errorMessageCheckbox  {
+    color: rgb(204, 4, 4);
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.main_page_registration .checkbox {
+    display: flex;
+    align-items: center;
+    margin-left: 17%;
+    width: 220px;
+    height: 20px;
+    margin-top: 24px;
+
+}
+
+.main_page_registration .checkbox input {
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+.checkbox {
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+}
+
+#errorMessageCheckbox {
+    display: flex;
+    align-items: center;
+    margin-left: 17%;
+    margin-top: 6px;
+
+}
+
+.main_page_registration .form_registr button {
+    margin-top: 45px;
+    margin-left: 17%;
+    width: 218px;
+    height: 48px;
+    border-radius: 30px;
+    background: rgb(33, 158, 96);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    text-transform: uppercase;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+.main_page_registration .form_registr button a {
+    cursor: pointer;
+}
+
+.main_page_registration .form_registr button:hover {
+    background-color: #167D4A;
+}
