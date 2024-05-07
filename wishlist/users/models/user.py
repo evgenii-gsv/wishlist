@@ -13,7 +13,7 @@ class User(AbstractUser):
     first_name = None
     last_name = None
     email = models.EmailField(_('email address'), unique=True)
-    identifier = RandomCharField(length=8, editable=False, unique=True)  # type: ignore
+    identifier = RandomCharField(length=8, editable=False, unique=True, db_index=True)  # type: ignore
     name = models.CharField(_('name'), max_length=255, blank=True)
 
     objects = UserManager()

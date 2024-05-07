@@ -1,0 +1,236 @@
+a {
+    text-decoration: none;
+}
+
+header {
+  position:fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100px;
+  background-color: #3D4FC5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+}
+
+header .logo_header img {
+  margin-right: 185px;
+}
+
+.personal-pages {
+  display: flex;
+  width: 735px;
+}
+
+.text-div {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 60px;
+  width: 146px;
+}
+
+.text-div a {
+    text-decoration: none; /* Убрать подчеркивание */
+    color: white;
+    text-transform: uppercase;
+}
+
+@media (max-width: 750px) {
+    header img {
+      display: none;
+    }
+}
+
+#menu-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 30px 120px 30px 60px;
+}
+
+#popup-menu {
+    position: absolute;
+    top: 110%;
+    right: 90%;
+    width: 236px;
+    height: 240px;
+    background-color: #3D4FC5;
+    display: none;
+    border-radius: 30px;
+    border: 1px solid #000000;
+    padding: 0;
+}
+
+#popup-menu ul {
+    width: 204px;
+    height: 208px;
+    margin-top: 16px;
+    padding: 0;
+    margin-left: 16px;
+}
+
+#popup-menu li {
+    width: 204px;
+    height: 50px;
+    padding: 0;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+#popup-menu li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+#popup-menu li:hover {
+    background-color: #263281;
+    width: 204px;
+    height: 50px;
+}
+
+#menu-icon {
+    cursor: pointer;
+}
+
+.main_page_friends {
+    margin-top: 180px;
+    margin-left: 120px;
+    justify-content: center;
+    align-items: center;
+    font-family: Rubik;
+}
+
+.main_page_friends .h2 {
+    margin-top: 24px;
+    color: rgb(1, 0, 0);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.main_page_friends .friends {
+    margin-top: 40px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.main_page_friends .john_doe {
+    width: 384px;
+    height: 122px;
+    overflow: hidden;
+    white-space: nowrap; /* Запрет переноса текста на новую строку */
+    text-overflow: ellipsis; /* Добавление многоточия в конце текста, если он обрезается */
+    box-sizing: border-box;
+    border: 1px solid rgb(61, 79, 197);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px 24px 16px 24px;
+}
+
+.main_page_friends .john_doe_header {
+    width: 336px;
+    height: 49px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+}
+
+.john_doe_header .image_name {
+    width: 49px;
+    height: 49px;
+}
+
+.john_doe_header .name_birthday {
+    display: block;
+    margin-left: 16px;
+    width: 196px;
+    height: 49px;
+}
+
+.name_birthday .name p {
+    color: rgb(1, 0, 0);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: left;
+    order: 0;
+    margin: 0px 0px 0px 0px;
+}
+
+.name_birthday .birthday {
+    margin: 2px 0px;
+    order: 1;
+    width: 123px;
+    height: 26px;
+}
+
+.name_birthday .birthday p {
+    width: 101px;
+    height: 26px;
+    margin-left: 5px;
+}
+
+.name_birthday .birthday img {
+    width: 16px;
+    height: 26px;
+}
+
+.john_doe_header .birthday {
+    display: flex;
+}
+
+.main_page_friends .john_doe_footer {
+    width: 136px;
+    height: 27px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 14px 0px;
+}
+
+.john_doe_footer .share {
+
+    width: 46px;
+    height: 17px;
+    margin-right: 16px;
+    padding: 4px 0px 4px 0px;
+    color: rgb(61, 79, 197);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.john_doe_footer .unfolow {
+    padding: 4px 0px 4px 0px;
+    color: rgb(204, 4, 4);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
