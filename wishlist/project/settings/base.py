@@ -20,9 +20,11 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'djmoney',
 
     # Apps
     'wishlist.users.apps.UsersConfig',
+    'wishlist.wishes.apps.WishesConfig',
 ]
 
 MIDDLEWARE = [
