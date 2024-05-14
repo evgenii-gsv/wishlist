@@ -31,7 +31,7 @@
         </div>-->
     </header>
 
-    <div class="main_page_registration"> <!-- Это основная страница регистрации-->
+    <div class="main_page_registration">
         <div class="h2_registr">
             <p>Let’s make your wish come true</p>
         </div>
@@ -43,25 +43,39 @@
         </div>
         <div class="form_registr">
             <form>
-                <input class="inputName" type="text" id="myInput" name="field1" placeholder="Name">
-                <div id="errorMessageName"></div>
-                <input class="inputEmail" type="email" id="myInput2" name="field2" placeholder="Email">
-                <div id="errorMessageMail"></div>
-                <input class="inputPassword" type="password" id="myInput3" name="field3" placeholder="Password">
-                <div id="errorMessagePass1"></div>
-                <input class="inputPassword2" type="password" id="myInput4" name="field4" placeholder="Repeat password">
-                <div id="errorMessagePass2"></div>
+                <input class="myInput" type="text" id="myInput" name="field1" placeholder="Name">
+                <div class="errorMessageField"></div>
+                <input class="myInput" type="email" id="myInput2" name="field2" placeholder="Email">
+                <div class="errorMessageField"></div>
+                <input class="myInput" type="password" id="myInput3" name="field3" placeholder="Password">
+                <div class="errorMessageField"></div>
+                <input class="myInput" type="password" id="myInput4" name="field4" placeholder="Repeat password">
+                <div class="errorMessageField"></div>
                 <div class="checkbox">
                     <input type="checkbox" id="user_agreement_checkbox" name="user_agreement">
                     <p>I accept the <a href="#">User agreement</a></p>
                 </div>
-                <div id="errorMessageCheckbox"></div>
+                <div class="errorMessageField"></div>
                 <button type="submit" id="submit_button" <a href="#">SIGN UP</a></button>
             </form>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    <script>
 
+        var inputFields = document.querySelectorAll(".myInput");
+    
+
+        inputFields.forEach(function(inputField) {
+            inputField.addEventListener("input", function() {
+
+                if (this.value === "") {
+                    this.classList.remove("white-background");
+                } else {
+
+                    this.classList.add("white-background");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
