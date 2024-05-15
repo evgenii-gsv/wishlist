@@ -85,6 +85,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 60px;
     height: 650px;
 }
 
@@ -103,6 +104,7 @@ body {
 
 .h2_registr p {
     margin: 0px;
+    height: 38px;
 }
 
 .main_page_registration .h3_registr {
@@ -154,101 +156,106 @@ body {
     border: 1px solid rgb(61, 79, 197);
 }*/
 
-#myInput.active, #myInput:focus {
+.myInput.active, .myInput:focus {
     background-color: #fff; /* цвет фона при фокусе на поле ввода */
     outline: none;
     border: 1px solid rgb(61, 79, 197);
 }
 
-#myInput:not(.active):focus {
+.myInput:not(.active):focus {
     background-color: initial; /* используйте изначальный цвет фона, если поле не активно */
     outline: none;
     border: 1px solid rgb(61, 79, 197);
 }
 
-#myInput.error {
+.white-background {
+    background-color: #fff !important; /* белый цвет фона */
+    border: 1px solid rgb(61, 79, 197) !important;
+}
+
+.myInput.error {
     border: 1px solid red; /* красная рамка в случае ошибки */
 }
 
-#myInput.success {
+.myInput.success {
     border: 1px solid green; /* зелёная рамка при успешном вводе */
 }
 
-#myInput {
+.myInput {
     font-size: 18px; /* Установка размера шрифта */
 }
 
-#myInput2.active, #myInput2:focus {
-    background-color: #fff; /* цвет фона при фокусе на поле ввода */
+/* #myInput2.active, #myInput2:focus {
+    background-color: #fff; цвет фона при фокусе на поле ввода
     outline: none;
     border: 1px solid rgb(61, 79, 197);
-}
+} */
 
-#myInput2:not(.active):focus {
-    background-color: initial; /* используйте изначальный цвет фона, если поле не активно */
+/* #myInput2:not(.active):focus {
+    background-color: initial; используйте изначальный цвет фона, если поле не активно
     outline: none;
     border: 1px solid rgb(61, 79, 197);
 }
 
 #myInput2.error {
-    border: 1px solid red; /* красная рамка в случае ошибки */
+    border: 1px solid red;  красная рамка в случае ошибки
 }
 
 #myInput2.success {
-    border: 1px solid green; /* зелёная рамка при успешном вводе */
+    border: 1px solid green;  зелёная рамка при успешном вводе
 }
 
 #myInput2 {
-    font-size: 18px; /* Установка размера шрифта */
+    font-size: 18px;  Установка размера шрифта
 }
 
 #myInput3.active, #myInput3:focus {
-    background-color: #fff; /* цвет фона при фокусе на поле ввода */
+    background-color: #fff;  цвет фона при фокусе на поле ввода
     outline: none;
     border: 1px solid rgb(61, 79, 197);
 }
 
 #myInput3:not(.active):focus {
-    background-color: initial; /* используйте изначальный цвет фона, если поле не активно */
+    background-color: initial;  используйте изначальный цвет фона, если поле не активно
     outline: none;
     border: 1px solid rgb(61, 79, 197);
 }
 
 #myInput3.error {
-    border: 1px solid red; /* красная рамка в случае ошибки */
+    border: 1px solid red;  красная рамка в случае ошибки
 }
 
 #myInput3.success {
-    border: 1px solid green; /* зелёная рамка при успешном вводе */
+    border: 1px solid green;  зелёная рамка при успешном вводе
 }
 
 #myInput3 {
-    font-size: 18px; /* Установка размера шрифта */
+    font-size: 18px;  Установка размера шрифта
 }
 
 #myInput4.active, #myInput4:focus {
-    background-color: #fff; /* цвет фона при фокусе на поле ввода */
+    background-color: #fff;  цвет фона при фокусе на поле ввода
     outline: none;
     border: 1px solid rgb(61, 79, 197);
 }
 
 #myInput4:not(.active):focus {
-    background-color: initial; /* используйте изначальный цвет фона, если поле не активно */
+    background-color: initial; используйте изначальный цвет фона, если поле не активно
     outline: none;
     border: 1px solid rgb(61, 79, 197);
 }
 
 #myInput4.error {
-    border: 1px solid red; /* красная рамка в случае ошибки */
+    border: 1px solid red;  красная рамка в случае ошибки
 }
 
 #myInput4.success {
-    border: 1px solid green; /* зелёная рамка при успешном вводе */
+    border: 1px solid green;  зелёная рамка при успешном вводе
 }
 
 #myInput4 {
-    font-size: 18px; /* Установка размера шрифта */
-}
+    font-size: 18px;  Установка размера шрифта
+} */
 
 input {
     padding-left: 24px;
@@ -267,7 +274,7 @@ input::placeholder {
     line-height: 21px;
 }
 
-.form_registr #errorMessageName, #errorMessageMail, #errorMessagePass1, #errorMessagePass2, #errorMessageCheckbox  {
+.form_registr.errorMessageName {
     color: rgb(204, 4, 4);
     font-family: Rubik;
     font-size: 12px;
@@ -292,6 +299,10 @@ input::placeholder {
     margin-right: 10px;
 }
 
+.main_page_registration .checkbox p {
+    margin: 0px;
+}
+
 .checkbox {
     font-family: Rubik;
     font-size: 14px;
@@ -305,7 +316,6 @@ input::placeholder {
     align-items: center;
     margin-left: 17%;
     margin-top: 6px;
-
 }
 
 .main_page_registration .form_registr button {

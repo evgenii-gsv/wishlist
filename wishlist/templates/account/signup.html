@@ -28,4 +28,21 @@
       </form>
   </div>
 </div>
+<script>
+
+  var inputFields = document.querySelectorAll(".myInput");
+
+
+  inputFields.forEach(function(inputField) {
+      inputField.addEventListener("input", function() {
+
+          if (this.value === "") {
+              this.classList.remove("white-background");
+          } else {
+
+              this.classList.add("white-background");
+          }
+      });
+  });
+</script>
 {% endblock content %}
