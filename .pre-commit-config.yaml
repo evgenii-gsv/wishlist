@@ -32,3 +32,4 @@ repos:
     hooks:
       - id: yapf
         additional_dependencies: [ toml ]
+exclude: webpages/
