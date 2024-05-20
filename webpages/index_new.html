@@ -52,7 +52,7 @@
                 <input class="myInput" type="password" id="myInput4" name="field4" placeholder="Repeat password">
                 <div class="errorMessageField"></div>
                 <div class="checkbox">
-                    <input type="checkbox" id="user_agreement_checkbox" name="user_agreement">
+                    <input type="checkbox" id="user_agreement_checkbox" name="user_agreement" required>
                     <p>I accept the <a href="#">User agreement</a></p>
                 </div>
                 <div class="errorMessageField"></div>
@@ -61,19 +61,17 @@
         </div>
     </div>
     <script>
-
-        var inputFields = document.querySelectorAll(".myInput");
-    
-
-        inputFields.forEach(function(inputField) {
-            inputField.addEventListener("input", function() {
-
-                if (this.value === "") {
-                    this.classList.remove("white-background");
-                } else {
-
-                    this.classList.add("white-background");
-                }
+        document.addEventListener("DOMContentLoaded", function() {
+            var inputFields = document.querySelectorAll(".myInput");
+        
+            inputFields.forEach(function(inputField) {
+                inputField.addEventListener("input", function() {
+                    if (this.value.trim() !== "") {
+                        this.classList.add("white-background");
+                    } else {
+                        this.classList.remove("white-background");
+                    }
+                });
             });
         });
     </script>
