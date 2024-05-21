@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}Wishlist{% endblock title %}</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik&display=swap" rel="stylesheet">
-  {% block styles %}{% endblock styles %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
 {% include "partials/header.html" %}

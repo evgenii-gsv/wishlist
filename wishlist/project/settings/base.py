@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'djmoney',
+    'widget_tweaks',
 
     # Apps
     'wishlist.users.apps.UsersConfig',

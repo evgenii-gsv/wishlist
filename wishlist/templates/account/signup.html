@@ -1,6 +1,5 @@
 {% extends "base.html" %}
-{% load static %}
-{% block styles %}<link rel="stylesheet" href="{% static 'css/stylesregistration.css' %}">{% endblock styles %}
+{% load widget_tweaks %}
 {% block content %}
 <div class="main_page_registration">
   <div class="h2_registr">
@@ -16,11 +15,17 @@
       <form action="" method="POST">
         {% csrf_token %}
         {% for field in form %}
-          {{ field }}
-          <div id="errorMessageName">{{ field.errors.as_text }}</div>
+          {% with classes=field.css_classes %}
+            {{ field|add_class:"myInput"|add_class:classes }}
+            <div class="errorMessageField">
+              {% for error in field.errors %}
+              <p>{{ error }}</p>
+              {% endfor %}
+            </div>
+          {% endwith %}
         {% endfor %}
         <div class="checkbox">
-          <input type="checkbox" id="user_agreement_checkbox" name="user_agreement">
+          <input type="checkbox" id="user_agreement_checkbox" name="user_agreement" required>
           <p>I accept the <a href="#">User agreement</a></p>
         </div>
         <div id="errorMessageCheckbox"></div>
@@ -29,20 +34,25 @@
   </div>
 </div>
 <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var inputFields = document.querySelectorAll(".myInput");
 
-  var inputFields = document.querySelectorAll(".myInput");
+    inputFields.forEach(function(inputField) {
 
+        if (inputField.value.trim() !== "") {
+            inputField.classList.add("white-background");
+        } else {
+            inputField.classList.remove("white-background");
+        }
 
-  inputFields.forEach(function(inputField) {
-      inputField.addEventListener("input", function() {
-
-          if (this.value === "") {
-              this.classList.remove("white-background");
-          } else {
-
-              this.classList.add("white-background");
-          }
-      });
+        inputField.addEventListener("input", function() {
+            if (this.value.trim() !== "") {
+                this.classList.add("white-background");
+            } else {
+                this.classList.remove("white-background");
+            }
+        });
+    });
   });
 </script>
 {% endblock content %}
