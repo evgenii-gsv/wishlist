@@ -17,7 +17,11 @@
         {% for field in form %}
           {% with classes=field.css_classes %}
             {{ field|add_class:"myInput"|add_class:classes }}
-            <div class="errorMessageField">{{ field.errors.as_text }}</div>
+            <div class="errorMessageField">
+              {% for error in field.errors %}
+              <p>{{ error }}</p>
+              {% endfor %}
+            </div>
           {% endwith %}
         {% endfor %}
         <div class="checkbox">
