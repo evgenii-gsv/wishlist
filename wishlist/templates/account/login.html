@@ -6,10 +6,10 @@
       <p>Let’s make your wish come true</p>
   </div>
   <div class="h3_registr">
-      <p>Register to make wishlists</p>
+      <p>Log in to make wishlists</p>
   </div>
   <div class="h4_registr">
-      <p>Already a member? <a href="{% url "account_login" %}">Log in</a></p>
+      <p>Not a member? <a href="{% url "account_signup" %}">Sign up</a></p>
   </div>
   <div class="form_registr">
       <form action="" method="POST">
@@ -24,12 +24,7 @@
             </div>
           {% endwith %}
         {% endfor %}
-        <div class="checkbox">
-          <input type="checkbox" id="user_agreement_checkbox" name="user_agreement" required checked>
-          <p>I accept the <a href="#">User agreement</a></p>
-        </div>
-        <div id="errorMessageCheckbox"></div>
-        <button type="submit" id="submit_button" <a href="#">SIGN UP</a></button>
+        <button type="submit" id="submit_button" <a href="#">LOG IN</a></button>
       </form>
   </div>
 </div>
