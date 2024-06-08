@@ -5,11 +5,9 @@ jobs:
   quality-assurance:
     name: Quality Assurance
     runs-on: ubuntu-latest
-    env:
-      WISHLIST_SETTING_DATABASES: '{"default":{"HOST":"db"}}'
 
     services:
-      db:
+      postgres:
         image: postgres:16.1-alpine
         env:
           POSTGRES_DB: wishlist
