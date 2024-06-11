@@ -50,7 +50,7 @@
                 <input class="myInput" type="password" id="myInput3" name="field3" placeholder="Password">
                 <div class="errorMessageField"></div>
                 <input class="myInput" type="password" id="myInput4" name="field4" placeholder="Repeat password">
-                <div class="errorMessageField"></div>
+                <div class="errorMessageField">Text text text</div>
                 <div class="checkbox">
                     <input type="checkbox" id="user_agreement_checkbox" name="user_agreement" required>
                     <p>I accept the <a href="#">User agreement</a></p>
@@ -65,6 +65,13 @@
             var inputFields = document.querySelectorAll(".myInput");
         
             inputFields.forEach(function(inputField) {
+
+                if (inputField.value.trim() !== "") {
+                    inputField.classList.add("white-background");
+                } else {
+                    inputField.classList.remove("white-background");
+                }
+
                 inputField.addEventListener("input", function() {
                     if (this.value.trim() !== "") {
                         this.classList.add("white-background");
