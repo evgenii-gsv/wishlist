@@ -20,13 +20,15 @@
                     <li class="menu_item"><a href="#" class="menu_link">My brones</a></li>
                     <li class="menu_item"><a href="#" class="menu_link">Upcoming events</a></li>
                     <li class="menu_item"><a href="#" class="menu_link">About</a></li>
-                    <a href="#" class="popup_menu_toggle"><img src="img/avatar.svg" id="menu-icon" alt="menu"></a>
                 </ul>
-        </div>    
+        </div> 
+        <ul class="menu_header_popup">
+            <a href="#" class="popup_menu_toggle"><img src="img/testIMG.webp" id="menu-icon" alt="menu"></a>
+        </ul>   
     </header>
     <div class="popup_menu">
         <ul class="menu_icons" >
-            <li><a href="#"><img src="img/avatar.svg" alt="Изображение 1">My account</a></li>
+            <li><a href="#"><img src="img/testIMG.webp" alt="Изображение 1">My account</a></li>
             <li><a href="#"><img src="img/flat-color-icons_planner.svg" alt="Изображение 2"> Event calendar</a></li>
             <li><a href="#"><img src="img/Vector.svg" alt="Изображение 3">Settings</a></li>
             <li><a href="#"><img src="img/log out.svg" alt="Изображение 4">Log out</a></li>
@@ -46,12 +48,12 @@
 
     menuToggle.addEventListener('click', function() {
         // Проверяем текущий src изображения
-        if (menuIcon.src.includes('avatar.svg')) {
+        if (menuIcon.src.includes('testIMG.webp')) {
             // Если текущий src содержит 'avatar.svg', заменяем его на другое изображение
-            menuIcon.src = 'img/avatar_active.svg';
+            menuIcon.src = 'img/testIMG.webp';
         } else {
             // Если текущий src не содержит 'avatar.svg', возвращаем его обратно
-            menuIcon.src = 'img/avatar.svg';
+            menuIcon.src = 'img/testIMG.webp';
         }
     });
 });
